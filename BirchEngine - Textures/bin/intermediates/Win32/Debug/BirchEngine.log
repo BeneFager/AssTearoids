@@ -1,23 +1,20 @@
 ﻿  AssetManager.cpp
-C:\Users\Benjamin.Fager\Desktop\Dev\BirchEngine - Textures\BirchEngine\Src\ECS\TransformComponent.h(67,17): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\Benjamin.Fager\Desktop\Dev\BirchEngine - Textures\BirchEngine\Src\ECS\TransformComponent.h(68,39): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\Benjamin.Fager\Desktop\Dev\BirchEngine - Textures\BirchEngine\Src\ECS\TransformComponent.h(69,39): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Benjamin.Fager\Desktop\Dev\BirchEngine - Textures\BirchEngine\Src\ECS\TransformComponent.h(76,26): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Benjamin.Fager\Desktop\Dev\BirchEngine - Textures\BirchEngine\Src\ECS\TransformComponent.h(77,26): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
 C:\Users\Benjamin.Fager\Desktop\Dev\BirchEngine - Textures\BirchEngine\Src\ECS\TileComponent.h(28,16): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
 C:\Users\Benjamin.Fager\Desktop\Dev\BirchEngine - Textures\BirchEngine\Src\ECS\TileComponent.h(29,16): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
 C:\Users\Benjamin.Fager\Desktop\Dev\BirchEngine - Textures\BirchEngine\Src\ECS\TileComponent.h(43,24): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
 C:\Users\Benjamin.Fager\Desktop\Dev\BirchEngine - Textures\BirchEngine\Src\ECS\TileComponent.h(44,24): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
   Collision.cpp
-C:\Users\Benjamin.Fager\Desktop\Dev\BirchEngine - Textures\BirchEngine\Src\ECS\TransformComponent.h(67,17): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\Benjamin.Fager\Desktop\Dev\BirchEngine - Textures\BirchEngine\Src\ECS\TransformComponent.h(68,39): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\Benjamin.Fager\Desktop\Dev\BirchEngine - Textures\BirchEngine\Src\ECS\TransformComponent.h(69,39): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Benjamin.Fager\Desktop\Dev\BirchEngine - Textures\BirchEngine\Src\ECS\TransformComponent.h(76,26): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Benjamin.Fager\Desktop\Dev\BirchEngine - Textures\BirchEngine\Src\ECS\TransformComponent.h(77,26): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
 C:\Users\Benjamin.Fager\Desktop\Dev\BirchEngine - Textures\BirchEngine\Src\ECS\TileComponent.h(28,16): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
 C:\Users\Benjamin.Fager\Desktop\Dev\BirchEngine - Textures\BirchEngine\Src\ECS\TileComponent.h(29,16): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
 C:\Users\Benjamin.Fager\Desktop\Dev\BirchEngine - Textures\BirchEngine\Src\ECS\TileComponent.h(43,24): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
 C:\Users\Benjamin.Fager\Desktop\Dev\BirchEngine - Textures\BirchEngine\Src\ECS\TileComponent.h(44,24): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
   Game.cpp
-C:\Users\Benjamin.Fager\Desktop\Dev\BirchEngine - Textures\BirchEngine\Src\ECS\TransformComponent.h(67,17): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\Benjamin.Fager\Desktop\Dev\BirchEngine - Textures\BirchEngine\Src\ECS\TransformComponent.h(68,39): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\Benjamin.Fager\Desktop\Dev\BirchEngine - Textures\BirchEngine\Src\ECS\TransformComponent.h(69,39): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Benjamin.Fager\Desktop\Dev\BirchEngine - Textures\BirchEngine\Src\ECS\TransformComponent.h(76,26): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Benjamin.Fager\Desktop\Dev\BirchEngine - Textures\BirchEngine\Src\ECS\TransformComponent.h(77,26): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
 C:\Users\Benjamin.Fager\Desktop\Dev\BirchEngine - Textures\BirchEngine\Src\ECS\TileComponent.h(28,16): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
 C:\Users\Benjamin.Fager\Desktop\Dev\BirchEngine - Textures\BirchEngine\Src\ECS\TileComponent.h(29,16): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
 C:\Users\Benjamin.Fager\Desktop\Dev\BirchEngine - Textures\BirchEngine\Src\ECS\TileComponent.h(43,24): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
@@ -33,9 +30,8 @@ C:\Users\Benjamin.Fager\Desktop\Dev\BirchEngine - Textures\BirchEngine\Src\Game.
               T=TransformComponent
           ]
   Map.cpp
-C:\Users\Benjamin.Fager\Desktop\Dev\BirchEngine - Textures\BirchEngine\Src\ECS\TransformComponent.h(67,17): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\Benjamin.Fager\Desktop\Dev\BirchEngine - Textures\BirchEngine\Src\ECS\TransformComponent.h(68,39): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\Benjamin.Fager\Desktop\Dev\BirchEngine - Textures\BirchEngine\Src\ECS\TransformComponent.h(69,39): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Benjamin.Fager\Desktop\Dev\BirchEngine - Textures\BirchEngine\Src\ECS\TransformComponent.h(76,26): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Benjamin.Fager\Desktop\Dev\BirchEngine - Textures\BirchEngine\Src\ECS\TransformComponent.h(77,26): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
 C:\Users\Benjamin.Fager\Desktop\Dev\BirchEngine - Textures\BirchEngine\Src\ECS\TileComponent.h(28,16): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
 C:\Users\Benjamin.Fager\Desktop\Dev\BirchEngine - Textures\BirchEngine\Src\ECS\TileComponent.h(29,16): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
 C:\Users\Benjamin.Fager\Desktop\Dev\BirchEngine - Textures\BirchEngine\Src\ECS\TileComponent.h(43,24): warning C4244: '=': conversion from 'float' to 'int', possible loss of data

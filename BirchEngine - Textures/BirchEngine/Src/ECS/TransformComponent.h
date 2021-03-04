@@ -11,9 +11,10 @@ public:
 	Vector2D position;
 	Vector2D velocity;
 	Vector2D forward;
+	Vector2D center;
 
 	int speed = 3;
-	int angle = 0;
+	int TAngle = 0;
 
 
 	// defaults for collider
@@ -51,6 +52,7 @@ public:
 		width = w;
 		scale = sc;
 		SetForward();
+		SetCenter();
 	}
 
 	void init() override
@@ -60,16 +62,27 @@ public:
 
 	void update() override
 	{
-		position.x += velocity.x *speed;
-		position.y += velocity.y *speed;
+		position.x += velocity.x * speed;
+		position.y += velocity.y * speed;
 	}
 
 	void UpdateForward(int angle)
 	{
-		angle = angle * (3.1415 / 180);
-		forward.x = position.x * cos(angle) - position.y * sin(angle);
-		forward.y = position.x * sin(angle) + position.y * cos(angle);
+		//angle = angle * (3.1415 / 180);
+		if(TAngle + angle >= 360) TAngle = 0;
+		if(TAngle - angle <= -360) TAngle = 0;
+		std::cout << TAngle << std::endl;
+		//Vector2D dir = forward - center;
+		forward.x = cos(angle) + GetCenter().x; //- dir.y * sin(angle);
+		forward.y = sin(angle) + GetCenter().y; //+ dir.y * cos(angle);
+		
 	}
+
+	//void NewSetForward()
+	//{
+	//	float hypo = sqrtf(center.)
+	//}
+
 
 	Vector2D NormalizeVector2D(Vector2D vector)
 	{
@@ -79,8 +92,20 @@ public:
 	}
 	void SetForward()
 	{
-		forward.x = 400;
-		forward.y = 300;
+		forward.x = position.x + 16;
+		forward.y = position.y;
+	}
+
+	void SetCenter()
+	{
+		center.x = position.x + 16;
+		center.y = position.y + 16;
+	}
+
+
+	Vector2D GetCenter()
+	{
+		return center;
 	}
 
 	Vector2D GetForward()
