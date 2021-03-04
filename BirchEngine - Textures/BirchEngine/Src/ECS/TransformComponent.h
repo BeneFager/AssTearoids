@@ -4,6 +4,7 @@
 #include <math.h>
 
 
+
 class TransformComponent : public Component
 {
 public:
@@ -51,13 +52,14 @@ public:
 		height = h;
 		width = w;
 		scale = sc;
-		SetForward();
 		SetCenter();
+		SetForward();
+
 	}
 
 	void init() override
 	{
-		velocity.Zero(); //kanske ta bort
+		velocity.Zero(); //kanske ta borts
 	}
 
 	void update() override
@@ -69,19 +71,20 @@ public:
 	void UpdateForward(int angle)
 	{
 		//angle = angle * (3.1415 / 180);
-		if(TAngle + angle >= 360) TAngle = 0;
-		if(TAngle - angle <= -360) TAngle = 0;
-		std::cout << TAngle << std::endl;
-		//Vector2D dir = forward - center;
-		forward.x = cos(angle) + GetCenter().x; //- dir.y * sin(angle);
-		forward.y = sin(angle) + GetCenter().y; //+ dir.y * cos(angle);
-		
+		//if (TAngle >= 360) TAngle = 0;
+		//if (TAngle <= -1) TAngle = 270;
+
+
+		float deg2Rad = (3.1415926535897f * 2.0f) / 360.0f;
+		float rads = TAngle * deg2Rad;
+		forward = Vector2D(sin(rads), cos(rads));
+
 	}
 
-	//void NewSetForward()
-	//{
-	//	float hypo = sqrtf(center.)
-	//}
+	float forwardToDegrees(Vector2D forward) {
+		return (atan2(forward.y, forward.x) * (180 / M_PI)) -90 ;
+
+	}
 
 
 	Vector2D NormalizeVector2D(Vector2D vector)
@@ -92,8 +95,8 @@ public:
 	}
 	void SetForward()
 	{
-		forward.x = position.x + 16;
-		forward.y = position.y;
+		forward.x = center.x - 16;
+		forward.y = center.y;
 	}
 
 	void SetCenter()

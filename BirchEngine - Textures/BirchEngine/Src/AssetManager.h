@@ -14,7 +14,7 @@ public:
 
 	//gameobjects
 	void CreateProjectile(Vector2D pos, Vector2D vel, int range, int speed, std::string id);
-
+	void CreateAsstearoid(Vector2D pos, Vector2D vel, int speed, float rot, int sc, std::string id);
 	//text
 	void AddTexture(std::string id, const char *path);
 	SDL_Texture *GetTexture(std::string id);

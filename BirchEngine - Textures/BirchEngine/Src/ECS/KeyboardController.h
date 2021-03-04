@@ -12,6 +12,7 @@ public:
 	TransformComponent *transform;
 	SpriteComponent *sprite;
 
+	int count;
 	void init() override
 	{
 		transform = &entity->getComponent<TransformComponent>();
@@ -26,35 +27,42 @@ public:
 		//Pilla
 		//Fixa rotation på spelaren
 		//fixa skjut
+
+		//whileLoop eller något? (_8(I)
 		if(Game::event.type == SDL_KEYDOWN)
 		{
 			switch(Game::event.key.keysym.sym)
 			{
 				case SDLK_w:
+
 					transform->SetCenter();
 					transform->UpdateForward(transform->TAngle);
-					transform->velocity = transform->NormalizeVector2D(transform->GetForward() - transform->GetCenter());
+					//transform->velocity -= transform->NormalizeVector2D(transform->GetForward() - transform->GetCenter());
+					transform->velocity -= transform->GetForward();
 
 					break;
 				case SDLK_s:
-					transform->UpdateForward(0);
+					transform->UpdateForward(transform->TAngle);
 					transform->velocity = transform->NormalizeVector2D(transform->GetForward() - transform->GetCenter());
 
 					break;
 				case SDLK_a:
-					sprite->turnSpeed -= 90;
-					transform->TAngle -= 90;
+					transform->TAngle += 4;
 					transform->UpdateForward(transform->TAngle);
-					std::cout << transform->GetForward() << std::endl;
+					sprite->turnSpeed = transform->forwardToDegrees(transform->GetForward());
+					//std::cout << sprite->turnSpeed << std::endl;
+					//std::cout << transform->GetForward() << std::endl;
 					break;
 				case SDLK_d:
-					sprite->turnSpeed += 90;
-					transform->TAngle += 90;
+
+					transform->TAngle -= 4;
 					transform->UpdateForward(transform->TAngle);
-					std::cout << transform->GetForward() << std::endl;
+					sprite->turnSpeed = transform->forwardToDegrees(transform->GetForward());
+					//std::cout << sprite->turnSpeed << std::endl;
+					//std::cout << transform->GetForward() << std::endl;
 					break;
 				case SDLK_SPACE:
-					Game::assets->CreateProjectile(transform->position, transform->NormalizeVector2D((transform->GetForward()+ transform->GetCenter()) - transform->GetCenter()), 500, 5, "point");
+					Game::assets->CreateProjectile(transform->GetCenter(), transform->NormalizeVector2D(transform->GetCenter() - (transform->GetForward() + transform->GetCenter())), 500, 5, "point");
 					break;
 				case SDLK_0:
 					std::cout << transform->GetForward() << " forward" << std::endl;
