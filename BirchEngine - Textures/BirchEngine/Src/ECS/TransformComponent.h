@@ -88,7 +88,7 @@ public:
 
 	void SetForward()
 	{
-		forward.x = center.x - 16;
+		forward.x = center.x + 16;
 		forward.y = center.y;
 	}
 

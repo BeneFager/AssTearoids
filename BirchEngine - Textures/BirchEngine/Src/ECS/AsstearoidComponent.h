@@ -14,7 +14,6 @@ public:
 	}
 	~AsstearoidComponent()
 	{
-
 	}
 
 
@@ -31,14 +30,14 @@ public:
 
 	void OnDestroy()
 	{
-		if(SP > 0)
+		if (SP > 0)
 		{
 			//spawn more
 		}
 		std::cout << "spawning more and destroying" << std::endl;
 		entity->destroy();
 	}
-	
+
 private:
 	TransformComponent* transform;
 	int speed;

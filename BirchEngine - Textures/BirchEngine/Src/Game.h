@@ -11,10 +11,12 @@ class ColliderComponent;
 class Game
 {
 public:
+
 	Game();
 	~Game();
 
 	void init(const char *title, int width, int height, bool fullscreen);
+
 
 	void handleEvents();
 	void update();
@@ -22,7 +24,7 @@ public:
 	void render();
 	void clean();
 
-
+	static float Time;
 	static SDL_Renderer *renderer;
 	static SDL_Event event;
 	static bool isRunning;

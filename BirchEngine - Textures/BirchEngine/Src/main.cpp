@@ -16,7 +16,10 @@ int main(int argc, char *argv[])
 
 	while (game->running())
 	{
-
+		//if (game->isPaused) {
+		//	std::cout << " isPaused" << std::endl;
+		//	continue;
+		//}
 		frameStart = SDL_GetTicks();
 
 
@@ -28,7 +31,10 @@ int main(int argc, char *argv[])
 
 		if(frameDelay > frameTime)
 		{
-			SDL_Delay(frameDelay - frameTime);
+			float deltaTime = frameDelay - frameTime;
+			game->Time += deltaTime/1000;
+			SDL_Delay(deltaTime);
+			
 		}
 	}
 

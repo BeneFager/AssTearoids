@@ -88,7 +88,7 @@ public:
 
 	void draw() override
 	{
-		TextureManager::Draw(texture, srcRect, destRect, turnSpeed, spriteFlip);
+		TextureManager::Draw(texture, srcRect, destRect, turnSpeed , spriteFlip);
 	}
 
 	void Play(const char *animName)
