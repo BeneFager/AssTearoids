@@ -34,39 +34,31 @@ public:
 			switch(Game::event.key.keysym.sym)
 			{
 				case SDLK_w:
-
 					transform->SetCenter();
 					transform->UpdateForward(transform->TAngle);
-					//transform->velocity -= transform->NormalizeVector2D(transform->GetForward() - transform->GetCenter());
-					transform->velocity -= transform->GetForward();
-
-					break;
-				case SDLK_s:
-					transform->UpdateForward(transform->TAngle);
-					transform->velocity = transform->NormalizeVector2D(transform->GetForward() - transform->GetCenter());
-
+					transform->velocity = transform->GetForward();
 					break;
 				case SDLK_a:
+					transform->SetCenter();
 					transform->TAngle += 4;
 					transform->UpdateForward(transform->TAngle);
 					sprite->turnSpeed = transform->forwardToDegrees(transform->GetForward());
-					//std::cout << sprite->turnSpeed << std::endl;
-					//std::cout << transform->GetForward() << std::endl;
 					break;
 				case SDLK_d:
-
+					transform->SetCenter();
 					transform->TAngle -= 4;
 					transform->UpdateForward(transform->TAngle);
 					sprite->turnSpeed = transform->forwardToDegrees(transform->GetForward());
-					//std::cout << sprite->turnSpeed << std::endl;
-					//std::cout << transform->GetForward() << std::endl;
 					break;
 				case SDLK_SPACE:
+					transform->SetCenter();
 					Game::assets->CreateProjectile(transform->GetCenter(), transform->NormalizeVector2D(transform->GetCenter() - (transform->GetForward() + transform->GetCenter())), 500, 5, "point");
 					break;
 				case SDLK_0:
-					std::cout << transform->GetForward() << " forward" << std::endl;
+					std::cout << transform->position << "pos" << std::endl;
+					/*std::cout << transform->GetForward() << " forward" << std::endl; */
 					std::cout << transform->GetCenter() << " Center" << std::endl;
+					break;
 				default:
 					break;
 			}
@@ -77,10 +69,8 @@ public:
 			switch(Game::event.key.keysym.sym)
 			{
 				case SDLK_w:
-					transform->velocity.Zero();
-					break;
-				case SDLK_s:
-					transform->velocity.Zero();
+					transform->velocity.x *= .9;
+					transform->velocity.y *= .9;
 					break;
 				case SDLK_ESCAPE:
 					Game::isRunning = false;

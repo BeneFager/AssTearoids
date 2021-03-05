@@ -29,13 +29,20 @@ public:
 
 	}
 
-
+	void OnDestroy()
+	{
+		if(SP > 0)
+		{
+			//spawn more
+		}
+		std::cout << "spawning more and destroying" << std::endl;
+		entity->destroy();
+	}
+	
 private:
 	TransformComponent* transform;
 	int speed;
 	float rotSpeed;
 	int SP = 0;
 	Vector2D velocity;
-
-
 };

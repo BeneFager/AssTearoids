@@ -28,7 +28,7 @@ void AssetManager::CreateAsstearoid(Vector2D pos, Vector2D vel, int speed, float
 	auto& asstearoid(manager->addentity());
 	asstearoid.addComponent<TransformComponent>(pos.x, pos.y, 32, 32, sc);
 	asstearoid.addComponent<SpriteComponent>(id, false);
-	asstearoid.addComponent<AsstearoidComponent>();
+	asstearoid.addComponent<AsstearoidComponent>(vel);
 	asstearoid.addComponent<ColliderComponent>("Asstearoid");
 	asstearoid.addGroup(Game::groupAsstearoids);
 }

@@ -54,7 +54,6 @@ public:
 		scale = sc;
 		SetCenter();
 		SetForward();
-
 	}
 
 	void init() override
@@ -64,26 +63,20 @@ public:
 
 	void update() override
 	{
-		position.x += velocity.x * speed;
-		position.y += velocity.y * speed;
+		position.x -= velocity.x * speed;
+		position.y -= velocity.y * speed;
 	}
 
 	void UpdateForward(int angle)
 	{
-		//angle = angle * (3.1415 / 180);
-		//if (TAngle >= 360) TAngle = 0;
-		//if (TAngle <= -1) TAngle = 270;
-
-
 		float deg2Rad = (3.1415926535897f * 2.0f) / 360.0f;
 		float rads = TAngle * deg2Rad;
 		forward = Vector2D(sin(rads), cos(rads));
-
 	}
 
-	float forwardToDegrees(Vector2D forward) {
-		return (atan2(forward.y, forward.x) * (180 / M_PI)) -90 ;
-
+	float forwardToDegrees(Vector2D forward)
+	{
+		return (atan2(forward.y, forward.x) * (180 / M_PI)) - 90;
 	}
 
 
@@ -91,8 +84,8 @@ public:
 	{
 		float magnitude = sqrtf(vector.x * vector.x + vector.y * vector.y);
 		return Vector2D(vector.x / magnitude, vector.y / magnitude);
-
 	}
+
 	void SetForward()
 	{
 		forward.x = center.x - 16;

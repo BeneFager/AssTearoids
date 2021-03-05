@@ -26,6 +26,7 @@ public:
 	static SDL_Renderer *renderer;
 	static SDL_Event event;
 	static bool isRunning;
+	static bool isPaused;
 	static AssetManager *assets;
 
 	enum groupLables : std::size_t
