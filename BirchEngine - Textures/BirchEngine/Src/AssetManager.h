@@ -22,6 +22,7 @@ public:
 	void SpawnAss();
 	void SetWindowSize(int width, int height);
 	Vector2D GetSpawnPoint();
+	Vector2D GetVel();
 	Vector2D NormalizeVector2D(Vector2D vector);
 
 

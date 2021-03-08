@@ -1,11 +1,39 @@
 ﻿  AssetManager.cpp
-C:\GithubSpace\AssTearoids\BirchEngine - Textures\BirchEngine\Src\ECS\TransformComponent.h(79,55): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
-C:\GithubSpace\AssTearoids\BirchEngine - Textures\BirchEngine\Src\ECS\TileComponent.h(28,16): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\GithubSpace\AssTearoids\BirchEngine - Textures\BirchEngine\Src\ECS\TileComponent.h(29,16): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\GithubSpace\AssTearoids\BirchEngine - Textures\BirchEngine\Src\ECS\TileComponent.h(43,24): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-C:\GithubSpace\AssTearoids\BirchEngine - Textures\BirchEngine\Src\ECS\TileComponent.h(44,24): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-C:\GithubSpace\AssTearoids\BirchEngine - Textures\BirchEngine\Src\AssetManager.cpp(41,83): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\GithubSpace\AssTearoids\BirchEngine - Textures\BirchEngine\Src\AssetManager.cpp(41,65): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\GithubSpace\AssTearoids\BirchEngine - Textures\BirchEngine\Src\AssetManager.cpp(58,29): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\GithubSpace\AssTearoids\BirchEngine - Textures\BirchEngine\Src\AssetManager.cpp(58,18): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  BirchEngine.vcxproj -> C:\GithubSpace\AssTearoids\BirchEngine - Textures\bin\Win32\Debug\BirchEngine.exe
+C:\Users\Benjamin.Fager\Documents\GitHub\AssTearoids\BirchEngine - Textures\BirchEngine\Src\ECS\TransformComponent.h(80,55): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+C:\Users\Benjamin.Fager\Documents\GitHub\AssTearoids\BirchEngine - Textures\BirchEngine\Src\ECS\TileComponent.h(28,16): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\Benjamin.Fager\Documents\GitHub\AssTearoids\BirchEngine - Textures\BirchEngine\Src\ECS\TileComponent.h(29,16): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\Benjamin.Fager\Documents\GitHub\AssTearoids\BirchEngine - Textures\BirchEngine\Src\ECS\TileComponent.h(43,24): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\Benjamin.Fager\Documents\GitHub\AssTearoids\BirchEngine - Textures\BirchEngine\Src\ECS\TileComponent.h(44,24): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\Benjamin.Fager\Documents\GitHub\AssTearoids\BirchEngine - Textures\BirchEngine\Src\AssetManager.cpp(60,29): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Benjamin.Fager\Documents\GitHub\AssTearoids\BirchEngine - Textures\BirchEngine\Src\AssetManager.cpp(60,18): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Collision.cpp
+C:\Users\Benjamin.Fager\Documents\GitHub\AssTearoids\BirchEngine - Textures\BirchEngine\Src\ECS\TransformComponent.h(80,55): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+C:\Users\Benjamin.Fager\Documents\GitHub\AssTearoids\BirchEngine - Textures\BirchEngine\Src\ECS\TileComponent.h(28,16): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\Benjamin.Fager\Documents\GitHub\AssTearoids\BirchEngine - Textures\BirchEngine\Src\ECS\TileComponent.h(29,16): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\Benjamin.Fager\Documents\GitHub\AssTearoids\BirchEngine - Textures\BirchEngine\Src\ECS\TileComponent.h(43,24): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\Benjamin.Fager\Documents\GitHub\AssTearoids\BirchEngine - Textures\BirchEngine\Src\ECS\TileComponent.h(44,24): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  Game.cpp
+C:\Users\Benjamin.Fager\Documents\GitHub\AssTearoids\BirchEngine - Textures\BirchEngine\Src\ECS\TransformComponent.h(80,55): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+C:\Users\Benjamin.Fager\Documents\GitHub\AssTearoids\BirchEngine - Textures\BirchEngine\Src\ECS\TileComponent.h(28,16): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\Benjamin.Fager\Documents\GitHub\AssTearoids\BirchEngine - Textures\BirchEngine\Src\ECS\TileComponent.h(29,16): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\Benjamin.Fager\Documents\GitHub\AssTearoids\BirchEngine - Textures\BirchEngine\Src\ECS\TileComponent.h(43,24): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\Benjamin.Fager\Documents\GitHub\AssTearoids\BirchEngine - Textures\BirchEngine\Src\ECS\TileComponent.h(44,24): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\Benjamin.Fager\Documents\GitHub\AssTearoids\BirchEngine - Textures\BirchEngine\Src\Game.cpp(78,60): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Benjamin.Fager\Documents\GitHub\AssTearoids\BirchEngine - Textures\BirchEngine\Src\ECS\ECS.h(97,33): warning C4244: 'argument': conversion from '_Ty' to 'float', possible loss of data
+          with
+          [
+              _Ty=int
+          ]
+C:\Users\Benjamin.Fager\Documents\GitHub\AssTearoids\BirchEngine - Textures\BirchEngine\Src\Game.cpp(70): message : see reference to function template instantiation 'T &Entity::addComponent<TransformComponent,int,int,int,int,int>(int &&,int &&,int &&,int &&,int &&)' being compiled
+          with
+          [
+              T=TransformComponent
+          ]
+  Map.cpp
+C:\Users\Benjamin.Fager\Documents\GitHub\AssTearoids\BirchEngine - Textures\BirchEngine\Src\ECS\TransformComponent.h(80,55): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+C:\Users\Benjamin.Fager\Documents\GitHub\AssTearoids\BirchEngine - Textures\BirchEngine\Src\ECS\TileComponent.h(28,16): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\Benjamin.Fager\Documents\GitHub\AssTearoids\BirchEngine - Textures\BirchEngine\Src\ECS\TileComponent.h(29,16): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\Benjamin.Fager\Documents\GitHub\AssTearoids\BirchEngine - Textures\BirchEngine\Src\ECS\TileComponent.h(43,24): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\Benjamin.Fager\Documents\GitHub\AssTearoids\BirchEngine - Textures\BirchEngine\Src\ECS\TileComponent.h(44,24): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  Generating Code...
+  BirchEngine.vcxproj -> C:\Users\Benjamin.Fager\Documents\GitHub\AssTearoids\BirchEngine - Textures\bin\Win32\Debug\BirchEngine.exe

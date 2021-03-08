@@ -65,6 +65,7 @@ public:
 	{
 		position.x -= velocity.x * speed;
 		position.y -= velocity.y * speed;
+		WrapCoordinated(position.x, position.y, position.x, position.y);
 	}
 
 	void UpdateForward(int angle)
@@ -107,5 +108,15 @@ public:
 	Vector2D GetForward()
 	{
 		return forward;
+	}
+
+	void WrapCoordinated(float ix, float iy, float &ox, float &oy)
+	{
+		ox = ix;
+		oy = iy;
+		if(ix < 0.0f) ox = ix + 800.0f;
+		if(ix > 800.0f) ox = ix - 800.0f;
+		if(iy < 0.0f) oy = iy + 640.0f;
+		if(iy > 640) oy = iy - 640.0f;
 	}
 };

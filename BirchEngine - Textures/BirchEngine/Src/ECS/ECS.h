@@ -135,29 +135,13 @@ public:
 	void ChangeGameState(GameState state)
 	{
 		gameState = state;
-
 	}
 
 	void update()
 	{
 		for(auto &e : entities) e->update();
 	}
-	//void PauseUpdate() {
-	//	std::cout << "isPaused" << std::endl;
-	//	
-	//	if (Game::event.type == SDL_KEYDOWN)
-	//	{
-	//		switch (Game::event.key.keysym.sym)
-	//		{
-	//		case SDLK_ESCAPE:
-	//			Game::isPaused = !Game::isPaused;
-	//			break;
-	//		default:
-	//			break;
-	//		}
-	//	}
-
-	//}
+	
 	void draw()
 	{
 		for(auto &e : entities) e->draw();

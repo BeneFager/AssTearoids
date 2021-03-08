@@ -121,7 +121,7 @@ void Game::handleEvents()
 
 void Game::update()
 {
-
+	std::cout << "player at " << player.getComponent<TransformComponent>().position << std::endl;
 	manager.refresh();
 	if (manager.gameState == manager.PlayState)
 	{

@@ -16,10 +16,7 @@ int main(int argc, char *argv[])
 
 	while (game->running())
 	{
-		//if (game->isPaused) {
-		//	std::cout << " isPaused" << std::endl;
-		//	continue;
-		//}
+		
 		frameStart = SDL_GetTicks();
 
 

@@ -19,7 +19,6 @@ public:
 	{
 		transform = &entity->getComponent<TransformComponent>();
 		transform->velocity = velocity;
-		std::cout << transform->GetForward() << std::endl;
 	}
 
 	void update() override
@@ -31,16 +30,7 @@ public:
 			std::cout << "Out of range" << std::endl;
 			entity->destroy();
 		}
-		/*
-		else if(transform->position.x > Game::camera.w || transform->position.x < Game::camera.w //fix this
-				|| transform->position.y >Game::camera.h || transform->position.y < Game::camera.h //fix this
-				) //fix this
-		{
-			std::cout << "Out of bounds" << std::endl;
-
-			entity->destroy();
-		}
-		*/
+		
 	}
 
 private:
