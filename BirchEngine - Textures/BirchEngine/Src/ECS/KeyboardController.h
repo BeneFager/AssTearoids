@@ -66,10 +66,10 @@ public:
 				/*std::cout << transform->GetForward() << " forward" << std::endl; */
 				std::cout << transform->GetCenter() << " Center" << std::endl;
 				break;
-			case SDLK_ESCAPE:
+			//case SDLK_ESCAPE:
 				//Game::isRunning = false;
-				Game::isPaused = !Game::isPaused;
-				break;
+				//Game::isPaused = !Game::isPaused;
+				//break;
 			default:
 				break;
 			}

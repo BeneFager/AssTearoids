@@ -45,6 +45,11 @@ Vector2D &Vector2D::Divide(const Vector2D &vec)
 
 	return *this;
 }
+Vector2D NormalizeVector2D(Vector2D vector)
+{
+	float magnitude = sqrtf(vector.x * vector.x + vector.y * vector.y);
+	return Vector2D(vector.x / magnitude, vector.y / magnitude);
+}
 
 Vector2D &operator+(Vector2D &v1, const Vector2D &v2)
 {

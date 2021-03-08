@@ -118,11 +118,26 @@ public:
 
 class Manager
 {
+
+
 private:
 	std::vector<std::unique_ptr<Entity>> entities;
 	std::array<std::vector<Entity *>, maxGroups> groupedEntities;
 
 public:
+	enum GameState
+	{
+		PlayState,
+		MenuState
+	};
+
+	GameState gameState = PlayState;
+	void ChangeGameState(GameState state)
+	{
+		gameState = state;
+
+	}
+
 	void update()
 	{
 		for(auto &e : entities) e->update();

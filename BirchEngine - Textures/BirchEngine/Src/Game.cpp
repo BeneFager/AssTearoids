@@ -5,18 +5,17 @@
 #include "Vector2D.h"
 #include "Collision.h"
 #include "AssetManager.h"
+#include "AssManager.h"
 
 
 Map* map;
 Manager manager;
-
 SDL_Renderer* Game::renderer = nullptr;
 SDL_Event Game::event;
 
 //SDL_Rect Game::camera = { 0,0,800,640 };
 
 AssetManager* Game::assets = new AssetManager(&manager);
-
 bool Game::isRunning = false;
 bool Game::isPaused = false;
 float Game::Time = 0.0f;
@@ -50,6 +49,12 @@ void Game::init(const char* title, int width, int height, bool fullscreen)
 
 		isRunning = true;
 	}
+
+	assets->SetWindowSize(width,height);
+	//AssManager* assMan = new AssManager(Game::assets);
+	
+	//assMan->SetWindowSize(width, height);
+
 	assets->AddTexture("terrain", "Assets/terrain_ss.png");
 	assets->AddTexture("ship", "Assets/Ship.png");
 	assets->AddTexture("point", "Assets/Point.png");
@@ -70,10 +75,9 @@ void Game::init(const char* title, int width, int height, bool fullscreen)
 
 
 	//State class som tar han om lvls och spawning etc
-	assets->CreateAsstearoid(Vector2D(0, 0), Vector2D(.1, .1), 1, 36, 1, "Ass");
-	assets->CreateAsstearoid(Vector2D(50, 50), Vector2D(1, 1), 1, 36, 1, "Ass");
-	//assets->CreateProjectile(Vector2D(600, 600), Vector2D(2,0), 200, 2, "point");
-
+	assets->CreateAsstearoid(Vector2D(0, 0), Vector2D(-.1, -.1), 1, 36, 1, "Ass");
+	manager.ChangeGameState(manager.PlayState);
+	std::cout << manager.gameState << std::endl;
 }
 
 
@@ -93,11 +97,25 @@ void Game::handleEvents()
 	case SDL_QUIT:
 		isRunning = false;
 		break;
-	case SDLK_ESCAPE:
-		isPaused = !isPaused;
-		break;
 	default:
 		break;
+	}
+
+	if (Game::event.type == SDL_KEYUP)
+	{
+		switch (Game::event.key.keysym.sym)
+		{
+		case SDLK_ESCAPE:
+			if (manager.gameState == manager.PlayState)
+				manager.ChangeGameState(manager.MenuState);
+			else
+				manager.ChangeGameState(manager.PlayState);
+			break;
+
+		default:
+			break;
+
+		}
 	}
 }
 
@@ -105,30 +123,18 @@ void Game::update()
 {
 
 	manager.refresh();
-	if (!isPaused)
+	if (manager.gameState == manager.PlayState)
 	{
 		manager.update();
 	}
-	if (isPaused) {
+	if (manager.gameState == manager.MenuState)
+	{
+		std::cout << manager.gameState << std::endl;
 
-		std::cout << "isPaused == " << isPaused<< std::endl;
 
-		handleEvents();
+		//handleEvents();
 		//manager.PauseUpdate();
 
-
-		//if (Game::event.type == SDL_KEYDOWN)
-		//{
-		//	switch (Game::event.key.keysym.sym)
-		//	{
-		//	case SDLK_ESCAPE:
-		//		//Game::isRunning = false;
-		//		Game::isPaused = !Game::isPaused;
-		//		break;
-		//	default:
-		//		break;
-		//	}
-		//}
 		return;
 	}
 
@@ -151,6 +157,8 @@ void Game::update()
 			{
 				p->destroy();
 				a->getComponent<AsstearoidComponent>().OnDestroy();
+				assets->SpawnAss();
+				
 				std::cout << "p in ass" << std::endl;
 				// destroy Ass roid
 			}
@@ -165,11 +173,24 @@ void Game::update()
 void Game::render()
 {
 	SDL_RenderClear(renderer);
+	if (manager.gameState == manager.PlayState)
+	{
+		DrawGame();
+	}
+	else if (manager.gameState == manager.MenuState)
+	{
+		for (auto& t : tiles) t->draw();
+		//DrawMenu();
+	}
+	SDL_RenderPresent(renderer);
+}
+
+void Game::DrawGame()
+{
 	for (auto& t : tiles) t->draw();
 	for (auto& p : projectiles) p->draw();
 	for (auto& p : players) p->draw();
 	for (auto& a : asstearoids) a->draw();
-	SDL_RenderPresent(renderer);
 }
 
 void Game::clean()
@@ -177,4 +198,9 @@ void Game::clean()
 	SDL_DestroyWindow(window);
 	SDL_DestroyRenderer(renderer);
 	SDL_Quit();
+}
+
+void Game::Restart()
+{
+
 }
