@@ -114,9 +114,9 @@ public:
 	{
 		ox = ix;
 		oy = iy;
-		if(ix < 0.0f) ox = ix + 800.0f;
-		if(ix > 800.0f) ox = ix - 800.0f;
-		if(iy < 0.0f) oy = iy + 640.0f;
-		if(iy > 640) oy = iy - 640.0f;
+		if(ix < 0.0f -32) ox = ix + 800.0f +32;
+		if(ix > 800.0f +32) ox = ix - (800.0f +32);
+		if(iy < -32.0f) oy = iy + 640.0f+ 32;
+		if(iy > 640+ 32) oy = iy - 640.0f -32;
 	}
 };

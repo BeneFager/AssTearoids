@@ -56,9 +56,9 @@ void Game::init(const char* title, int width, int height, bool fullscreen)
 	//assMan->SetWindowSize(width, height);
 
 	assets->AddTexture("terrain", "Assets/terrain_ss.png");
-	assets->AddTexture("ship", "Assets/Ship.png");
+	assets->AddTexture("ship", "Assets/Shit.png");
 	assets->AddTexture("point", "Assets/Point.png");
-	assets->AddTexture("Ass", "Assets/Asstearoid.png");
+	assets->AddTexture("Ass", "Assets/Asstearoid2.png");
 
 	map = new Map("terrain", 1, 32);
 
@@ -75,7 +75,12 @@ void Game::init(const char* title, int width, int height, bool fullscreen)
 
 
 	//State class som tar han om lvls och spawning etc
-	assets->CreateAsstearoid(Vector2D(0, 0), Vector2D(-.1, -.1), 1, 36, 1, "Ass");
+	//assets->CreateAsstearoid(Vector2D(0, 0), Vector2D(-.1, -.1), 1, 36, 1, "Ass");
+	for (int i = 0; i < 5; i++)
+	{
+		assets->SpawnAss();
+	}
+
 	manager.ChangeGameState(manager.PlayState);
 	std::cout << manager.gameState << std::endl;
 }
@@ -101,27 +106,27 @@ void Game::handleEvents()
 		break;
 	}
 
-	if (Game::event.type == SDL_KEYUP)
-	{
-		switch (Game::event.key.keysym.sym)
-		{
-		case SDLK_ESCAPE:
-			if (manager.gameState == manager.PlayState)
-				manager.ChangeGameState(manager.MenuState);
-			else
-				manager.ChangeGameState(manager.PlayState);
-			break;
+	//if (Game::event.type == SDL_KEYUP)
+	//{
+	//	switch (Game::event.key.keysym.sym)
+	//	{
+	//	case SDLK_ESCAPE:
+	//		if (manager.gameState == manager.PlayState)
+	//			manager.ChangeGameState(manager.MenuState);
+	//		else
+	//			manager.ChangeGameState(manager.PlayState);
+	//		break;
 
-		default:
-			break;
+	//	default:
+	//		break;
 
-		}
-	}
+	//	}
+	//}
 }
 
 void Game::update()
 {
-	std::cout << "player at " << player.getComponent<TransformComponent>().position << std::endl;
+	//std::cout << "player at " << player.getComponent<TransformComponent>().position << std::endl;
 	manager.refresh();
 	if (manager.gameState == manager.PlayState)
 	{
@@ -143,7 +148,9 @@ void Game::update()
 		SDL_Rect aCollider = a->getComponent<ColliderComponent>().collider;
 		if (Collision::AABB(player.getComponent<ColliderComponent>().collider, aCollider))
 		{
-			player.destroy();
+			//player.destroy();
+			Restart();
+			break;
 			//Todo lmao fix this
 		}
 	}
@@ -202,5 +209,19 @@ void Game::clean()
 
 void Game::Restart()
 {
+	for (auto& ass :asstearoids)
+	{
+		ass->destroy();
+
+
+	}
+
+	player.getComponent<TransformComponent>().position.x = 400;
+	player.getComponent<TransformComponent>().position.y = 320;
+
+	for (int i = 0; i < 5; i++)
+	{
+		assets->SpawnAss();
+	}
 
 }
