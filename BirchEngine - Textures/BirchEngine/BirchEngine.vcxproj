@@ -97,12 +97,12 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>C:\Users\Benjamin.Fager\Desktop\SDL2_ttf-devel-2.0.15-VC\SDL2_ttf-2.0.15\include;C:\Users\Benjamin.Fager\Desktop\Dev\SDL2_image-2.0.1\include;C:\Users\Benjamin.Fager\Desktop\Dev\SDL2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Benjamin.Fager\Desktop\Dev\SDL2_image-2.0.1\include;C:\Users\Benjamin.Fager\Desktop\Dev\SDL2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>C:\Users\Benjamin.Fager\Desktop\SDL2_ttf-devel-2.0.15-VC\SDL2_ttf-2.0.15\lib\x86;C:\Users\Benjamin.Fager\Desktop\Dev\SDL2_image-2.0.1\lib\x86;C:\Users\Benjamin.Fager\Desktop\Dev\SDL2\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\Benjamin.Fager\Desktop\Dev\SDL2_image-2.0.1\lib\x86;C:\Users\Benjamin.Fager\Desktop\Dev\SDL2\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <SubSystem>Console</SubSystem>
-      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL_ttf.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -174,7 +174,6 @@
     <ClInclude Include="Src\ECS\TileComponent.h" />
     <ClInclude Include="Src\ECS\TransformComponent.h" />
     <ClInclude Include="Src\ECS\SpriteComponent.h" />
-    <ClInclude Include="Src\ECS\UILabel.h" />
     <ClInclude Include="Src\Game.h" />
     <ClInclude Include="Src\Map.h" />
     <ClInclude Include="Src\TextureManager.h" />

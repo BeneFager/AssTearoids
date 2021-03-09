@@ -95,8 +95,5 @@
     <ClInclude Include="Src\AssManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Src\ECS\UILabel.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>
