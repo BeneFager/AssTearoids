@@ -7,4 +7,5 @@
 #include "TileComponent.h"
 #include "ProjectileComponent.h"
 #include "AsstearoidComponent.h"
+#include "UILabel.h"
 
