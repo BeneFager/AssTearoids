@@ -8,3 +8,4 @@
 #include "ProjectileComponent.h"
 #include "AsstearoidComponent.h"
 
+//All components 

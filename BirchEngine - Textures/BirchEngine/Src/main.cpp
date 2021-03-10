@@ -2,6 +2,13 @@
 
 Game *game = nullptr;
 
+/// <summary>
+/// Gameloop and initiliser for the game
+/// capped framerate at 60
+/// </summary>
+/// <param name="argc"></param>
+/// <param name="argv"></param>
+/// <returns></returns>
 int main(int argc, char *argv[])
 {
 

@@ -1,12 +1,12 @@
 ﻿  AssetManager.cpp
-C:\GithubSpace\AssTearoids\BirchEngine - Textures\BirchEngine\Src\ECS\TransformComponent.h(80,55): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
-C:\GithubSpace\AssTearoids\BirchEngine - Textures\BirchEngine\Src\ECS\TileComponent.h(28,16): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\GithubSpace\AssTearoids\BirchEngine - Textures\BirchEngine\Src\ECS\TileComponent.h(29,16): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\GithubSpace\AssTearoids\BirchEngine - Textures\BirchEngine\Src\ECS\TileComponent.h(43,24): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-C:\GithubSpace\AssTearoids\BirchEngine - Textures\BirchEngine\Src\ECS\TileComponent.h(44,24): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-C:\GithubSpace\AssTearoids\BirchEngine - Textures\BirchEngine\Src\AssetManager.cpp(62,19): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\GithubSpace\AssTearoids\BirchEngine - Textures\BirchEngine\Src\AssetManager.cpp(67,19): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\GithubSpace\AssTearoids\BirchEngine - Textures\BirchEngine\Src\AssetManager.cpp(71,29): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\GithubSpace\AssTearoids\BirchEngine - Textures\BirchEngine\Src\AssetManager.cpp(75,29): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\GithubSpace\AssTearoids\BirchEngine - Textures\BirchEngine\Src\AssetManager.cpp(78): warning C4715: 'AssetManager::GetSpawnPoint': not all control paths return a value
-  BirchEngine.vcxproj -> C:\GithubSpace\AssTearoids\BirchEngine - Textures\bin\Win32\Debug\BirchEngine.exe
+C:\Users\Benjamin.Fager\Documents\GitHub\AssTearoids\BirchEngine - Textures\BirchEngine\Src\ECS\TransformComponent.h(98,55): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+C:\Users\Benjamin.Fager\Documents\GitHub\AssTearoids\BirchEngine - Textures\BirchEngine\Src\ECS\TileComponent.h(30,16): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\Benjamin.Fager\Documents\GitHub\AssTearoids\BirchEngine - Textures\BirchEngine\Src\ECS\TileComponent.h(31,16): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\Benjamin.Fager\Documents\GitHub\AssTearoids\BirchEngine - Textures\BirchEngine\Src\ECS\TileComponent.h(45,24): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\Benjamin.Fager\Documents\GitHub\AssTearoids\BirchEngine - Textures\BirchEngine\Src\ECS\TileComponent.h(46,24): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\Benjamin.Fager\Documents\GitHub\AssTearoids\BirchEngine - Textures\BirchEngine\Src\AssetManager.cpp(82,19): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Benjamin.Fager\Documents\GitHub\AssTearoids\BirchEngine - Textures\BirchEngine\Src\AssetManager.cpp(87,19): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Benjamin.Fager\Documents\GitHub\AssTearoids\BirchEngine - Textures\BirchEngine\Src\AssetManager.cpp(91,29): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Benjamin.Fager\Documents\GitHub\AssTearoids\BirchEngine - Textures\BirchEngine\Src\AssetManager.cpp(95,29): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Benjamin.Fager\Documents\GitHub\AssTearoids\BirchEngine - Textures\BirchEngine\Src\AssetManager.cpp(98): warning C4715: 'AssetManager::GetSpawnPoint': not all control paths return a value
+  BirchEngine.vcxproj -> C:\Users\Benjamin.Fager\Documents\GitHub\AssTearoids\BirchEngine - Textures\bin\Win32\Debug\BirchEngine.exe

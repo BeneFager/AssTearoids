@@ -34,7 +34,6 @@ public:
 	static bool isRunning;
 	static bool isPaused;
 	static AssetManager* assets;
-	//AssManager* assMan;
 
 	enum groupLables : std::size_t
 	{

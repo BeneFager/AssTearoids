@@ -1,11 +1,11 @@
 #pragma once
-
 #include "ECS.h"
 #include "Components.h"
 #include "../Vector2D.h"
-#include "../AssManager.h"
 
-
+/// <summary>
+/// Asstearoids sets a starting velocity for the transform
+/// </summary>
 class AsstearoidComponent : public Component
 {
 public:
@@ -17,28 +17,13 @@ public:
 	{
 	}
 
-
 	void init()override
 	{
 		transform = &entity->getComponent<TransformComponent>();
 		transform->velocity = velocity;
 	}
 
-	void update() override
-	{
-
-	}
-
-	void OnDestroy()
-	{
-		std::cout << "spawning more and destroying" << std::endl;
-		entity->destroy();
-	}
-
 private:
-	AssManager* ass;
-	TransformComponent* transform;
-	int speed;
-	float rotSpeed;
+	TransformComponent *transform;
 	Vector2D velocity;
 };

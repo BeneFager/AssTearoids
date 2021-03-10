@@ -6,6 +6,10 @@
 #include "Vector2D.h"
 #include "ECS/ECS.h"
 
+/// <summary>
+/// Class for managing assets. 
+/// Such as spawning and adding textures
+/// </summary>
 class AssetManager
 {
 public:
@@ -23,7 +27,6 @@ public:
 	void SetWindowSize(int width, int height);
 	Vector2D GetSpawnPoint();
 	Vector2D GetVel();
-	Vector2D NormalizeVector2D(Vector2D vector);
 
 
 

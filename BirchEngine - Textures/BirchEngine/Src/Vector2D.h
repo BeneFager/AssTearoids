@@ -1,6 +1,10 @@
 #pragma once
 #include <iostream>
 
+/// <summary>
+/// Vector 2D class with overloaded operations
+/// used for transform and general coordinates
+/// </summary>
 class Vector2D
 {
 public:

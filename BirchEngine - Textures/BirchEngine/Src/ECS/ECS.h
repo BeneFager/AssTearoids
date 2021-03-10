@@ -35,7 +35,9 @@ using ComponentBitSet = std::bitset<maxComponents>; //used to find out if an ent
 using GroupBitset = std::bitset<maxGroups>;
 using ComponentArray = std::array<Component *, maxComponents>;
 
-
+/// <summary>
+/// Component base class
+/// </summary>
 class Component
 {
 public:
@@ -52,7 +54,7 @@ public:
 class Entity
 {
 private:
-	Manager &manager;
+	Manager &manager; //manager ref
 	bool active = true;
 	std::vector<std::unique_ptr<Component>> components;
 
@@ -116,32 +118,22 @@ public:
 
 };
 
+/// <summary>
+/// Manages all the entities
+/// </summary>
 class Manager
 {
-
-
 private:
-	std::vector<std::unique_ptr<Entity>> entities;
-	std::array<std::vector<Entity *>, maxGroups> groupedEntities;
+	std::vector<std::unique_ptr<Entity>> entities; //list of entities
+	std::array<std::vector<Entity *>, maxGroups> groupedEntities; //group of entities
 
 public:
-	enum GameState
-	{
-		PlayState,
-		MenuState
-	};
-
-	GameState gameState = PlayState;
-	void ChangeGameState(GameState state)
-	{
-		gameState = state;
-	}
 
 	void update()
 	{
 		for(auto &e : entities) e->update();
 	}
-	
+
 	void draw()
 	{
 		for(auto &e : entities) e->draw();
@@ -169,17 +161,18 @@ public:
 					   std::end(entities));
 	}
 
+	//Adding entities to groups
 	void AddToGroup(Entity *mEntity, Group mGroup)
 	{
 		groupedEntities[mGroup].emplace_back(mEntity);
 	}
-
+	//fetching entity group
 	std::vector<Entity *> &getGroup(Group mGroup)
 	{
 		return groupedEntities[mGroup];
 	}
 
-
+	//Adding an entity
 	Entity &addentity()
 	{
 		Entity *e = new Entity(*this);

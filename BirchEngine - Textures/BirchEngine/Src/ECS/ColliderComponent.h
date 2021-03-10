@@ -4,6 +4,10 @@
 #include "Components.h"
 #include "../TextureManager.h"
 
+
+/// <summary>
+/// Class for setting up and updating collider
+/// </summary>
 class ColliderComponent : public Component
 {
 public:
@@ -28,6 +32,9 @@ public:
 		collider.h = collider.w = size;
 	}
 
+	/// <summary>
+	/// makes sure that everything that has a collider also has a transform
+	/// </summary>
 	void init() override
 	{
 		if(!entity->hasComponent<TransformComponent>())
@@ -36,14 +43,13 @@ public:
 		}
 		transform = &entity->getComponent<TransformComponent>();
 
-		tex = TextureManager::LoadTexture("Assets/ColTex.png");
-		srcR = { 0,0,32,32 };
 		destR = { collider.x, collider.y, collider.w, collider.h };
 
-
-
 	}
-
+	/// <summary>
+	/// updates the position of the collider to the transforms postition
+	/// except for the background
+	/// </summary>
 	void update() override
 	{
 
@@ -60,10 +66,4 @@ public:
 		destR.y = collider.y;
 
 	}
-
-	void draw() override
-	{
-		TextureManager::Draw(tex, srcR, destR, SDL_FLIP_NONE);
-	}
-
 };

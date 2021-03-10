@@ -5,7 +5,10 @@
 #include "../AssetManager.h"
 
 
-
+/// <summary>
+/// Class for handling input of the player.
+/// This component is only applied to the player so it is not possible for multiple inputs
+/// </summary>
 class KeyboardController : public Component
 {
 public:
@@ -23,7 +26,6 @@ public:
 	/// </summary>
 	void update() override
 	{
-		//Pilla
 
 		transform->velocity.x *= .99f;
 		transform->velocity.y *= .99f;
@@ -54,7 +56,6 @@ public:
 				(transform->GetForward() + transform->GetCenter()) - transform->GetCenter()) + transform->velocity,
 				500, 5, "point");
 			timeToNextShot = Game::Time + ShootCD;
-			std::cout << timeToNextShot << "   " << Game::Time << std::endl;
 		}
 
 		if (Game::event.type == SDL_KEYDOWN)
@@ -63,13 +64,11 @@ public:
 			{
 			case SDLK_0:
 				std::cout << transform->position << "pos" << std::endl;
-				/*std::cout << transform->GetForward() << " forward" << std::endl; */
 				std::cout << transform->GetCenter() << " Center" << std::endl;
 				break;
-			//case SDLK_ESCAPE:
-				//Game::isRunning = false;
-				//Game::isPaused = !Game::isPaused;
-				//break;
+			case SDLK_ESCAPE:
+				Game::isRunning = false;
+				break;
 			default:
 				break;
 			}

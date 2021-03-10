@@ -151,7 +151,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Src\AssetManager.cpp" />
-    <ClCompile Include="Src\AssManager.cpp" />
     <ClCompile Include="Src\Collision.cpp" />
     <ClCompile Include="Src\ECS\ECS.cpp" />
     <ClCompile Include="Src\Game.cpp" />
@@ -162,7 +161,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Src\AssetManager.h" />
-    <ClInclude Include="Src\AssManager.h" />
     <ClInclude Include="Src\Collision.h" />
     <ClInclude Include="Src\ECS\Animation.h" />
     <ClInclude Include="Src\ECS\AsstearoidComponent.h" />

@@ -1,5 +1,7 @@
 #pragma once
-
+/// <summary>
+/// Makes use of tiles images for animation
+/// </summary>
 struct Animation
 {
 

@@ -1,6 +1,8 @@
 #include "Vector2D.h"
 
-
+/// <summary>
+/// See header
+/// </summary>
 Vector2D::Vector2D()
 {
 	x = 0.0;

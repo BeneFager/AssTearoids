@@ -4,6 +4,11 @@
 #include "Components.h"
 #include "../Vector2D.h"
 
+
+/// <summary>
+/// Componenta added to projectiles.
+/// Handles the velocity and destruction 
+/// </summary>
 class ProjectileComponent : public Component
 {
 public:
@@ -20,7 +25,9 @@ public:
 		transform = &entity->getComponent<TransformComponent>();
 		transform->velocity = velocity;
 	}
-
+	/// <summary>
+	/// destroys the object when it has travelled a set distance
+	/// </summary>
 	void update() override
 	{
 		distance += speed;

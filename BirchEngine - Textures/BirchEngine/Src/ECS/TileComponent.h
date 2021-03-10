@@ -4,7 +4,9 @@
 #include "SDL.h"
 #include "../AssetManager.h"
 
-
+/// <summary>
+/// Background tiles
+/// </summary>
 class TileComponent : public Component
 {
 public:

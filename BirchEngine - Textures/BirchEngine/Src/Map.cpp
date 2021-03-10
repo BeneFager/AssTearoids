@@ -16,7 +16,12 @@ Map::~Map()
 
 }
 
-
+/// <summary>
+/// Loads a map from a file
+/// </summary>
+/// <param name="path"></param>
+/// <param name="sizeX"></param>
+/// <param name="sizeY"></param>
 void Map::LoadMap(std::string path, int sizeX, int sizeY)
 {
 	char c;
@@ -42,6 +47,13 @@ void Map::LoadMap(std::string path, int sizeX, int sizeY)
 
 }
 
+/// <summary>
+/// Adds tiles to the manager
+/// </summary>
+/// <param name="srcX"></param>
+/// <param name="srcY"></param>
+/// <param name="xpos"></param>
+/// <param name="ypos"></param>
 void Map::AddTile(int srcX, int srcY, int xpos, int ypos)
 {
 	auto &tile(manager.addentity());

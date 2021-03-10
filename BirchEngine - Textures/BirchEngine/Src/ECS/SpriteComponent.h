@@ -6,6 +6,10 @@
 #include <map>
 #include "../AssetManager.h"
 
+
+/// <summary>
+/// Handles the drawing of sprites.
+/// </summary>
 class SpriteComponent : public Component
 {
 private:
@@ -55,12 +59,17 @@ public:
 	{
 		
 	}
-
+	/// <summary>
+	/// Fetches the Id of the sprite from the asset manager
+	/// </summary>
+	/// <param name="id"></param>
 	void setTex(std::string id)
 	{
 		texture = Game::assets->GetTexture(id);
 	}
-
+	/// <summary>
+	/// Sets the sprite to match the transform
+	/// </summary>
 	void init() override
 	{
 		transform = &entity->getComponent<TransformComponent>();
@@ -68,9 +77,10 @@ public:
 		srcRect.x = srcRect.y = 0;
 		srcRect.w = transform->width;
 		srcRect.h = transform->height;
-		
 	}
-
+	/// <summary>
+	/// updates the sprite to match the transform
+	/// </summary>
 	void update() override
 	{
 		if(animated)
@@ -96,7 +106,6 @@ public:
 		frames = animations[animName].frames;
 		animIndex = animations[animName].index;
 		speed = animations[animName].speed;
-
 	}
 	
 };
